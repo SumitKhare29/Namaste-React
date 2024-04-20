@@ -1,0 +1,23 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is react basic files",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SumitKhare29/Namaste-React.git"
+  },
+  "keywords": [],
+  "author": "sumit khare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SumitKhare29/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/SumitKhare29/Namaste-React#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
