@@ -1,14 +1,21 @@
-
+import { useParams } from "react-router-dom";
+import resList from "../utils/mockData";
 
 function RestaurantMenu() {
+  const {resId} = useParams();
+  const filterRestaurant = resList.filter((res)=>{
+   return res.id === resId;
+  });
+ console.log(resId);
+ console.log(filterRestaurant);
+ console.log();
+
   return (
     <div>
-    <h1>Restaurant Name</h1>
-    <p>Menu</p>
+    <h1>{filterRestaurant[0].restaurant}</h1>
+    <p>{filterRestaurant[0].name}</p>
     <ul>
-      <li>Item1</li>
-      <li>Item2</li>
-      <li>Item3</li>
+      <li>{filterRestaurant[0].cuisine}</li>
     </ul>
     </div>
     
