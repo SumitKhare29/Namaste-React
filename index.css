@@ -42,3 +42,7 @@
     margin: 5px;
     cursor: pointer;
 }
+.filter-container{
+    display:flex;
+    cursor: pointer;
+}
