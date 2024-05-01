@@ -18,3 +18,7 @@
 14. HTTPs support
 15. Tree Shaking algorithms -remove unused code.
 16. Different builds for dev and prod
+
+# Routing
+1. Client Side - SPA -Single Page Application
+2. Server Side - Make network call on page load
