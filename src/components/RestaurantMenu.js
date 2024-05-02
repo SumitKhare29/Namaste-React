@@ -1,21 +1,15 @@
 import { useParams } from "react-router-dom";
-import resList from "../utils/mockData";
+import useResData from "../utils/useResData";
 
 function RestaurantMenu() {
   const {resId} = useParams();
-  const filterRestaurant = resList.filter((res)=>{
-   return res.id === resId;
-  });
- console.log(resId);
- console.log(filterRestaurant);
- console.log();
-
+  const filterRestaurant = useResData(resId); //custom hook
   return (
     <div>
-    <h1>{filterRestaurant[0].restaurant}</h1>
-    <p>{filterRestaurant[0].name}</p>
+    <h1>{filterRestaurant.restaurant}</h1>
+    <p>{filterRestaurant.name}</p>
     <ul>
-      <li>{filterRestaurant[0].cuisine}</li>
+      <li>{filterRestaurant.cuisine}</li>
     </ul>
     </div>
     
