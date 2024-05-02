@@ -6,7 +6,7 @@ class UserClass extends React.Component{
         super(props);
         this.state={
             userInfo:{
-                login:'',
+                login:'Dummy Data',
                 avatar_url:'',
                 url:'',
                 type:''
@@ -17,17 +17,27 @@ class UserClass extends React.Component{
         console.log("Lifecycle: componentDidMount executed");
         const data = await fetch('https://api.github.com/users/sumitkhare29');
         const json = data.json();
-        console.log(json);
-
+        console.log('Lifecycle: API Called');
         const resolvedPromise = Promise.resolve(json);
         resolvedPromise.then((value) => {
-        //console.log(value);
+        console.log('Lifecycle: Promise Resolved');
         this.setState({
             userInfo: value,
         });
             });
+        this.timer = setInterval(()=>{
+            console.log('Setting Interval: Sumit is exploring ABOUT US page');
+        },1000);
         
     };
+    componentDidUpdate(){
+        console.log('Lifecycle: componentDidUpdate executed');
+    }
+    componentWillUnmount(){
+        clearInterval(this.timer);
+        console.log('Clearing Interval: Sumit moved to different page');
+        console.log('Lifecycle: componentWillUnmount executed');
+    }
     render(){
         //onsole.log(this.state.userInfo);
         const {login, avatar_url, url, type} = this.state.userInfo;
@@ -35,7 +45,7 @@ class UserClass extends React.Component{
         return(
            
             <div className='user-card-class'>
-                {console.log("Lifecycle: render method executed")}
+                {console.log(`Lifecycle: render method executed with ${this.state.userInfo.login}`)}
             <h1>User Details!!!</h1>
             <img src={avatar_url} className="git-avatar"></img>
             <p>User Name: {login}</p>
