@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 
 const Body = () => {
   const [list, setList] = useState(resList);
-  const [currentValue, setsCurrentValue] = useState("");
+  const [currentValue, setCurrentValue] = useState("");
   const filterList = () => {
     const filteredList = resList.filter((res) => {
       return res.rating > 4;
