@@ -25,7 +25,7 @@ const Body = () => {
         <div className="filter-container flex items-center">
           <div className="search m-4 p-4">
             <input
-              className="border border-solid border-black"
+              className="border border-solid m-1 p-1 w-[1100px] h-[40px] shadow-lg border-green-800 rounded-lg"
               type="text"
               value={currentValue}
               onChange={(e) => {
