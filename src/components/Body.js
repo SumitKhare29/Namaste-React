@@ -1,15 +1,16 @@
-import Cards from "./Cards";
+import Cards, { PromotedCards } from "./Cards";
 import resList from "../utils/mockData";
 import { useState } from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [list, setList] = useState(resList);
   const [currentValue, setCurrentValue] = useState("");
+  const PromotedCardsNew = PromotedCards(Cards);
   const filterList = () => {
     const filteredList = resList.filter((res) => {
       return res.rating > 4;
-    })
+    });
     return filteredList;
   };
   const searchedList = (searchedValue) => {
@@ -33,7 +34,7 @@ const Body = () => {
               }}
             />
             <button
-            className="px-4 py-2 bg-green-100 m-4 shadow-lg rounded-lg"
+              className="px-4 py-2 bg-green-100 m-4 shadow-lg rounded-lg"
               onClick={() => {
                 console.log(currentValue);
                 const newList = searchedList(currentValue);
@@ -57,7 +58,9 @@ const Body = () => {
         </div>
         <div className="res-container flex flex-wrap">
           {list.map((resData) => (
-            <Link to={"/restaurant/" + resData.id} key={resData.id} ><Cards cards={resData} /></Link>
+            <Link to={"/restaurant/" + resData.id} key={resData.id}>
+              {resData.promoted? <PromotedCardsNew cards={resData}/>:<Cards cards={resData} />}
+            </Link>
           ))}
         </div>
       </div>

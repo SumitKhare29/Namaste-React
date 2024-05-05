@@ -5,7 +5,8 @@ const resList=[
       "name": "Spicy Chicken Wings",
       "restaurant": "The Grill House",
       "rating": 4.5,
-      "cuisine": "American"
+      "cuisine": "American",
+      "promoted": false
     },
     {
       "id":"2",
@@ -13,7 +14,8 @@ const resList=[
       "name": "Margherita Pizza",
       "restaurant": "Pizza Palace",
       "rating": 4.8,
-      "cuisine": "Italian"
+      "cuisine": "Italian",
+      "promoted": false
     },
     {
       "id":"3",
@@ -21,7 +23,8 @@ const resList=[
       "name": "Sushi Platter",
       "restaurant": "Tokyo Sushi Bar",
       "rating": 4.6,
-      "cuisine": "Japanese"
+      "cuisine": "Japanese",
+      "promoted": true
     },
     {
       "id":"4",
@@ -29,7 +32,8 @@ const resList=[
       "name": "Taco Sampler",
       "restaurant": "Mexican Bistro",
       "rating": 4.4,
-      "cuisine": "Mexican"
+      "cuisine": "Mexican",
+      "promoted": true
     },
     {
       "id":"5",
@@ -37,7 +41,8 @@ const resList=[
       "name": "Pad Thai",
       "restaurant": "Thai Delight",
       "rating": 4.7,
-      "cuisine": "Thai"
+      "cuisine": "Thai",
+      "promoted": true
     },
     {
       "id":"6",
@@ -45,7 +50,8 @@ const resList=[
       "name": "Classic Burger",
       "restaurant": "Burger Joint",
       "rating": 4.3,
-      "cuisine": "American"
+      "cuisine": "American",
+      "promoted": true
     },
     {
       "id":"7",
@@ -53,7 +59,8 @@ const resList=[
       "name": "Paneer Tikka Masala",
       "restaurant": "Taste of India",
       "rating": 4.9,
-      "cuisine": "Indian"
+      "cuisine": "Indian",
+      "promoted": true
     },
     {
       "id":"8",
@@ -61,7 +68,8 @@ const resList=[
       "name": "Miso Ramen",
       "restaurant": "Ramen House",
       "rating": 3.7,
-      "cuisine": "Japanese"
+      "cuisine": "Japanese",
+      "promoted": true
     },
     {
       "id":"9",
@@ -69,7 +77,8 @@ const resList=[
       "name": "Falafel Wrap",
       "restaurant": "Mediterranean Eats",
       "rating": 3.6,
-      "cuisine": "Mediterranean"
+      "cuisine": "Mediterranean",
+      "promoted": true
     },
     {
       "id":"10",
@@ -77,7 +86,8 @@ const resList=[
       "name": "BBQ Ribs",
       "restaurant": "Smokehouse Grill",
       "rating": 3.5,
-      "cuisine": "American"
+      "cuisine": "American",
+      "promoted": false
     }
   ];
   export default resList;
