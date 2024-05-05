@@ -22,10 +22,10 @@ const Body = () => {
   return (
     <>
       <div className="body">
-        <div className="filter-container">
-          <div className="search">
+        <div className="filter-container flex items-center">
+          <div className="search m-4 p-4">
             <input
-              className="search-input"
+              className="border border-solid border-black"
               type="text"
               value={currentValue}
               onChange={(e) => {
@@ -33,6 +33,7 @@ const Body = () => {
               }}
             />
             <button
+            className="px-4 py-2 bg-green-100 m-4 shadow-lg rounded-lg"
               onClick={() => {
                 console.log(currentValue);
                 const newList = searchedList(currentValue);
@@ -43,7 +44,7 @@ const Body = () => {
               Search
             </button>
           </div>
-          <div className="filter-btn">
+          <div className="px-4 py-2 bg-green-100 m-4 shadow-lg rounded-lg">
             <button
               onClick={() => {
                 const updatedList = filterList();
@@ -54,7 +55,7 @@ const Body = () => {
             </button>
           </div>
         </div>
-        <div className="res-container">
+        <div className="res-container flex flex-wrap">
           {list.map((resData) => (
             <Link to={"/restaurant/" + resData.id} key={resData.id} ><Cards cards={resData} /></Link>
           ))}

@@ -3,8 +3,8 @@ const Cards=(props) =>{
     const{image,name,restaurant,cuisine,rating}=cards;
     return(
         <>
-        <div className='res-card' style={{backgroundColor:'#f0f0f0'}}>
-            <img className='res-image' src={image}></img>
+        <div className='res-card m-4 p-4 w-52 h-[300px] rounded-lg bg-green-50'>
+            <img className='res-image h-[150px] w-[200px] rounded-lg' src={image}></img>
             <h3>{name}</h3>
             <h4>{restaurant}</h4>
             <h4>{cuisine}</h4>
