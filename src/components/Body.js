@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Body = () => {
   const [list, setList] = useState(resList);
   const [currentValue, setCurrentValue] = useState("");
-  const PromotedCardsNew = PromotedCards(Cards);
+  const PromotedCardsNew = PromotedCards(Cards); // Higher Order Component
   const filterList = () => {
     const filteredList = resList.filter((res) => {
       return res.rating > 4;
@@ -26,7 +26,7 @@ const Body = () => {
         <div className="filter-container flex items-center">
           <div className="search m-4 p-4">
             <input
-              className="border border-solid m-1 p-1 w-[1100px] h-[40px] shadow-lg border-green-800 rounded-lg"
+              className="border border-solid m-1 p-1 w-[1100px] h-[40px] shadow-lg border-green-800 rounded-lg hover:bg-green-50 hover:shadow-2xl"
               type="text"
               value={currentValue}
               onChange={(e) => {
@@ -34,7 +34,7 @@ const Body = () => {
               }}
             />
             <button
-              className="px-4 py-2 bg-green-100 m-4 shadow-lg rounded-lg"
+              className="px-4 py-2 bg-green-100 m-4 shadow-lg rounded-lg hover:bg-green-200 hover:shadow-2xl"
               onClick={() => {
                 console.log(currentValue);
                 const newList = searchedList(currentValue);
@@ -45,7 +45,7 @@ const Body = () => {
               Search
             </button>
           </div>
-          <div className="px-4 py-2 bg-green-100 m-4 shadow-lg rounded-lg">
+          <div className="px-4 py-2 bg-green-100 m-4 shadow-lg rounded-lg hover:bg-green-200 hover:shadow-2xl">
             <button
               onClick={() => {
                 const updatedList = filterList();
