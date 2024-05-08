@@ -5,11 +5,11 @@ function RestaurantMenu() {
   const {resId} = useParams();
   const filterRestaurant = useResData(resId); //custom hook
   return (
-    <div>
-    <h1>{filterRestaurant.restaurant}</h1>
+    <div className="flex items-center flex-col">
+    <h1 className="font-bold my-6 text-2xl">{filterRestaurant.restaurant}</h1>
     <p>{filterRestaurant.name}</p>
     <ul>
-      <li>{filterRestaurant.cuisine}</li>
+      <li className="font-bold text-lg">{filterRestaurant.cuisine}</li>
     </ul>
     </div>
     

@@ -1,9 +1,12 @@
 import LOGO_URL from "../utils/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const status = useOnlineStatus();
+  const {loggedInUser} = useContext(UserContext);
   return (
     <>
       <div className="header flex justify-between bg-teal-200 shadow-lg h-24 mb-2">
@@ -27,6 +30,7 @@ const Header = () => {
             </li>
             {status ? <li>Online ✅</li> : <li>Offline 🔴</li>}
             <li className="px-4">Cart</li>
+            <li className="px-4 font-bold">{loggedInUser}</li>
           </ul>
         </div>
       </div>
