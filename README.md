@@ -22,3 +22,11 @@
 # Routing
 1. Client Side - SPA -Single Page Application
 2. Server Side - Make network call on page load
+
+# Redux
+1. Install libraries RTK @reduxjs/toolkit
+2. Install react-redux
+3. Build Store, connect store to app.
+4. Create Slice
+5. Dispatch action
+6. Selectors
